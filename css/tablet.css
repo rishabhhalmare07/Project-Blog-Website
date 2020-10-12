@@ -1,0 +1,21 @@
+@media(min-width: 768px) {
+    hr {
+      display: none;
+    }
+    
+    /* Footer */
+    footer {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    footer .copyright, footer .social-links {
+      margin-top: 1rem;
+    }
+  
+    /* Main - posts */
+    main .box-style {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem 1rem;
+    }    
+}

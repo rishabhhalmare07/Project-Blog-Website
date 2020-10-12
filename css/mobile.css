@@ -1,0 +1,317 @@
+/*CSS Common for all - CSS RESET*/
+*{
+    margin: 0;
+    padding: 0;    
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "header"
+      "services-container"
+      "client-section"
+      "contact"
+      "footer";
+  }
+
+/* CSS Variables - to access it as a variable afterwards */
+:root{
+    --navbar-height: 59px;
+}
+
+/*Navigation Bar*/
+.header{
+    display: flex;
+    align-items: center;
+    top: 0px;
+}
+.header::before{
+    content: "";
+    background-color: rgb(55, 179, 196);
+    position: fixed;
+    height:100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+header #logo {
+    display: flex;
+    align-items: center;
+  }
+  
+
+/*Navigation Bar - Logo(logo - div class for image) and Image(logo img - img from src img) */
+#logo{
+  margin: 10px 34px;
+}
+#logo img{
+  height: 27px;
+  margin: 10px 10px;
+
+}
+
+/*Navigation Bar - List Styling*/
+.header ul{
+    display: flex;
+    font-family: 'Economica', sans-serif;
+}
+.header ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+.header ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.header ul li a:hover{
+    color:black;
+    background-color:white;
+}
+
+/* Main Section */
+main {
+  padding: 1rem 2rem;
+  background: cyan;
+}
+main .box-style{
+    display: grid;
+  grid-template-columns: 1fr;
+}
+main div.box {
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 8px 0 rgb(26 26 25);
+}
+main div.box:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+main div.box .box {
+    padding: 0 1rem;
+  }
+main div.one {
+    background: red;
+  }
+  
+main div.two {
+    background: red;
+}
+main div.three {
+    background: red;
+  }
+  
+main div.four {
+    background: red;
+  }
+main .services-container{
+    background: rgb(74, 28, 182);
+  }
+
+/* box-style grid - Post.html */
+
+main .box-style-grid h1 {
+  text-align: center;
+}
+
+main .box-style-grid p b {
+  font-weight: bold;
+  color: #003E6B;
+  font-style: italic;
+}
+
+main .box-style-grid p code {
+  font-weight: bold;
+  color: #003E6B;
+  font-size: 18px;
+}
+
+/* Client Section */
+#client-section{
+    position: relative;
+}  
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: rgb(165, 238, 169);
+    width: 100%;
+    height: 361px;
+    z-index: -1;
+    opacity: 0.5;
+}  
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 34px;
+}
+#clients img{
+    height: 124px;
+}
+/* Contact Section*/
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: rgb(164, 193, 248);
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px ;
+  
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+#contact-box form{
+    width: 40%;
+
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Girassol', cursive;
+ }
+ /* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }  
+ /* Giving style and color to social media */
+  
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+.fa:hover {
+    opacity: 0.7;
+  }
+/*Footer -further styling*/
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer ul.social-links {
+  list-style: none;
+  display: flex;
+  margin: -15px 0px 0px 489px;
+  padding: 0px 0px 0px 444px;
+  }
+footer ul li {
+    margin-right: 1rem;
+  }
+footer ul li:last-child {
+    margin-right: 0;
+  }
+footer .copyright, footer .social-links {
+    margin-top: 0;
+  }
+footer i.fas.fa-heart {
+    color: #CF1124;
+  }
+footer ul.social-links a {
+    color: unset;
+  }
+/* ABout */
+.about {
+    margin-top: 2rem;
+  }
+.about p{
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    line-height: 16px;
+  }
+/* Utility Classes - to use same type of heading by just adding classes */
+.h-primary{
+  font-size: 1.8rem;
+  padding: 2px;
+  background: white;
+  font-family: 'Girassol', cursive;
+}
+.h-secondary{
+    font-size: 2.3rem;
+    padding: 12px;
+    font-family: 'Girassol', cursive;
+}
+.center{
+    text-align: center;
+}
+.button{
+    display: flex;
+    color: #27acc4;
+    text-align: center;
+    justify-content: center;
+}
+/*Newsletter*/
+
+/* Style the form element with a border around it */
+form {
+  border: 4px solid #f50000;
+}
+
+.setting{
+  margin: 0px 358px;
+  padding: 0px 178px;
+}
+
+/* Add some padding and a grey background color to containers */
+.newsletter {
+  padding: 20px;
+  background-color: rgb(289 218 441);
+}
+
+/* Style the input elements and the submit button */
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Add margins to the checkbox */
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
