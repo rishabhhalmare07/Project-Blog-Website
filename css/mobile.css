@@ -123,16 +123,15 @@ main .box-style-grid h1 {
 
 main .box-style-grid p b {
   font-weight: bold;
-  color: #003E6B;
+  color: #f006e4;
   font-style: italic;
 }
 
 main .box-style-grid p code {
   font-weight: bold;
-  color: #003E6B;
+  color: #ff0080;
   font-size: 18px;
 }
-
 /* Client Section */
 #client-section{
     position: relative;
